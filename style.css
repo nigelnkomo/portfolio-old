@@ -1,0 +1,359 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --colour-primary: #283618;
+    --colour-neutral: #FEFAE0;
+    --colour-neutral-alpha: hwb(52 88% 0% / 0.95);
+    --max-width: 88.5rem;
+    --h1: 11.391rem;
+    --h2: 7.594rem;
+    --h6: 1.5rem;
+    --gutter-vertical: 2rem;
+    --gutter-horizontal: 1rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: "Lora", serif;
+    background: url(./img/keyboard.png), var(--colour-neutral);
+    overflow-x: hidden;
+}
+
+h2 {
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 900;
+    font-size: var(--h2);
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+h6 {
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: var(--h6);
+}
+
+.link {
+    text-decoration: underline; 
+    text-decoration-thickness: .07rem;  
+    text-underline-offset: 0.2rem; 
+    font-size: 1rem;
+}
+
+.bullet {
+    width: 1rem;
+    height: 1rem;   
+}
+
+p {
+    line-height: 1.5;
+}
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar {
+    width: .5rem;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--colour-primary); 
+}
+
+/* HEADER */
+
+.header {
+    background-color: transparent;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 10; 
+    mix-blend-mode: difference;
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+.header__logo {
+    background-color: transparent;
+}
+
+.header__logo-text {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--colour-neutral);
+    mix-blend-mode: difference;
+    width: 100%;
+}
+
+.header__nav {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+}
+
+.header__nav-list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+}
+
+.header__nav-item:not(:last-of-type) {
+    margin-right: 2.5rem;
+    background-color: transparent;
+}
+
+.header__nav-item:hover {
+    text-decoration: underline; /* No extra height added */
+    text-decoration-thickness: .1rem; /* Set thickness of underline */
+    text-decoration-color: var(--colour-neutral); 
+    text-underline-offset: 0.2rem; 
+}
+
+
+.header__nav-link {
+    text-decoration: none;
+    color: var(--colour-neutral);
+    font-weight: bold;
+}
+
+/* HERO */
+
+.main {
+    width: 100%;
+}
+
+.hero {
+    position: relative;
+    max-width: var(--max-width);
+    height: 100vh;
+    margin: 0 auto;
+}
+
+.hero__title {
+    font-family: "Montserrat", sans-serif;
+    font-size: 11.391rem;
+    font-weight: 900;
+    color: var(--colour-primary);
+    line-height: 9rem;
+    position: absolute;
+    left: 0;
+    bottom: 4rem;
+}
+
+.hero__title--italic {
+    font-style: italic;
+}
+
+.hero__bullet {
+    right: 38rem;
+    top: 12.25rem; 
+    /* 
+    text line-height is 1.5rem 
+    font-size is 1rem, 
+    text is centred vertically in the line-height
+    so .25rem is the top and bottom text-spacing in the text box 
+    thus bullet should be +.25rem
+    */
+    background-color: var(--colour-primary);
+    position: absolute;
+}
+
+.hero__description {
+    position: absolute;
+    right: 0;
+    top: 12rem;
+    width: 37rem;
+}
+
+.hero__link {
+    color: var(--colour-primary);
+}
+
+/* GRID */
+
+.grid {
+    margin: var(--gutter-vertical) auto;
+}
+
+.row {
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* clear fix */
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.row:not(:last-child) {
+    margin-bottom: var(--gutter-vertical);
+}
+
+.col-1-of-2 {
+    width: calc((100% - var(--gutter-horizontal))/2);
+    float: left;
+    position: relative;
+}
+
+.col-1-of-2:not(:last-child) {
+    margin-right: var(--gutter-horizontal);
+}
+
+.col-1-of-3 {
+    width: calc((100% - 2 * var(--gutter-horizontal))/3);
+    float: left;
+    position: relative;
+}
+
+.col-2-of-3 {
+    width: calc(2 * ((100% - 2 * var(--gutter-horizontal)) / 3));
+    float: left;
+    position: relative;
+}
+
+.col-1-of-3:not(:last-child) {
+    margin-right: var(--gutter-horizontal);
+}
+
+.col-2-of-3:not(:last-child) {
+    margin-right: var(--gutter-horizontal);
+}
+
+/* PROJECTS */
+
+.projects {
+    width: 100%;
+    background-color: var(--colour-primary);
+    padding: 6rem 0;
+}
+
+.projects__title {
+    color: var(--colour-neutral);
+    letter-spacing: 6.5rem;
+}
+
+.project {
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+.project__image {
+    height: 38rem;
+    background: url(./img/placeholder.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.project__description {
+    height: 38rem;
+}
+
+.project__bullet {
+    background-color: var(--colour-neutral);
+    bottom: 5.25rem;
+    position: absolute;
+}
+
+.project__title {   
+    color: var(--colour-neutral);
+    position: absolute;
+    left: 2rem;
+    bottom: 3rem;
+}
+
+.project__link {
+    color: var(--colour-neutral);
+    position: absolute;
+    bottom: 0rem;
+}
+
+/* ABOUT */
+
+.about {
+    width: 100%;
+    padding: 3rem 0;
+    background-color: var(--colour-neutral-alpha);
+}
+
+.about__title {
+    color: var(--colour-primary);
+    letter-spacing: 4.6rem;
+}
+
+.about__content {
+    max-width: var(--max-width);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about__image {
+    width: 15rem;
+    height: 18rem;
+    background: url(./img/nigel.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.about__tldr {
+    margin: 2rem 0;
+}
+
+.about__bullet {
+    background-color: var(--colour-primary);
+    display: inline-block;
+    margin-right: 1rem;
+}
+
+.about__senary-title {
+    display: inline-block;
+}
+
+/* FOOTER */
+
+.footer {
+    width: 100%;
+    background-color: var(--colour-primary);
+    color: var(--colour-neutral);
+    padding-top: 2rem;
+}
+
+.footer__contact-info {
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+.footer__link {
+    color: var(--colour-neutral);
+}
+
+.footer__title {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    text-align: center;
+    letter-spacing: 2.7rem;
+    margin-bottom: 2rem;
+}
+
+.footer__copyright {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    text-align: center;
+}
+

@@ -1,0 +1,27 @@
+# Node modules 
+node_modules/
+
+# VS Code settings
+.vscode/
+
+# Linux system files
+*~
+
+# Ignore the compiled files 
+*.css.map
+*.js.map
+
+# IDE or editor files
+.DS_Store
+Thumbs.db
+
+# Log files
+*.log
+
+# OS-generated files
+ehthumbs.db
+Icon?
+
+# Temporary files
+*.swp
+*.swo
