@@ -79,6 +79,16 @@ p {
 
 /* HEADER */
 
+.header {
+    pointer-events: none;
+}
+
+.header__logo,
+.nav__label,
+.header__nav {
+    pointer-events: auto;
+}
+
 .header__logo {
     background-color: transparent;
 }
@@ -720,7 +730,6 @@ p {
     }
 }
 
-
 .no-scroll {
     overflow: hidden;
     height: 100vh;
@@ -760,13 +769,11 @@ p {
     .col-1-of-3 {
         width: 100%;
         display: block;
-        float: none;
     }
 
     .col-2-of-3 {
         width: 100%;
         display: block;
-        float: none;
     }
 
     .footer__contact-info p {
