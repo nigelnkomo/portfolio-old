@@ -1,6 +1,7 @@
 const logo = document.querySelector(".header__logo");
 const header = document.querySelector(".header");
 const navToggle = document.querySelector("#main-navigation-toggle");
+const navLinks = document.querySelectorAll(".header__nav-link");
 
 function moveLogo() {
     if (window.innerWidth < 1024) {
@@ -22,8 +23,7 @@ window.addEventListener("DOMContentLoaded", moveLogo);
 
 // Close navigation bar when link is clicked
 document.addEventListener("DOMContentLoaded", function () {
-    const navToggle = document.getElementById("main-navigation-toggle");
-    const navLinks = document.querySelectorAll(".header__nav-link");
+    
 
     navLinks.forEach(link => {
         link.addEventListener("click", function () {
@@ -32,3 +32,13 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+    
+    navToggle.addEventListener("change", function () {
+        if (this.checked) {
+            document.body.classList.add("no-scroll");
+        } else {
+            document.body.classList.remove("no-scroll");
+        }
+    });
+});
