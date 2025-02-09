@@ -6,8 +6,8 @@
     --colour-neutral-alpha: hwb(52 88% 0% / 0.95);
     --max-width: 88.5rem;
     --h1: 11.391rem;
-    --h2: 7.594rem;
-    --h6: 1.5rem;
+    --h2: max(1rem, 7.594cqi);
+    --h6: max(1rem, 1.5cqi);
     --gutter-vertical: 2rem;
     --gutter-horizontal: 1rem;
     --font-family-primary: "Lora", serif;
@@ -160,10 +160,10 @@ p {
 
 .hero__title {
     font-family: "Montserrat", sans-serif;
-    font-size: 11.391rem;
+    font-size: max(2rem, 11.391cqi);
     font-weight: 900;
     color: var(--colour-primary);
-    line-height: 9rem;
+    line-height: max(1rem, 9cqi);
     position: absolute;
     left: 0;
     bottom: 4rem;
@@ -174,7 +174,8 @@ p {
 }
 
 .hero__bullet {
-    right: 38rem;
+    position: absolute;
+    right: max(5rem, 39cqi);
     top: 12.25rem; 
     /* 
     text line-height is 1.5rem 
@@ -184,14 +185,13 @@ p {
     thus bullet should be +.25rem
     */
     background-color: var(--colour-primary);
-    position: absolute;
 }
 
 .hero__description {
     position: absolute;
     right: 0;
     top: 12rem;
-    width: 37rem;
+    width: max(5rem, 38cqi);
 }
 
 .hero__link:link,
@@ -257,11 +257,13 @@ p {
     width: 100%;
     background-color: var(--colour-primary);
     padding: 6rem 0;
+    padding: 5rem 1rem;
 }
 
 .projects__title {
     color: var(--colour-neutral);
-    letter-spacing: 6.5rem;
+    letter-spacing: max(1rem, 6.5cqi);
+    margin-bottom: 1rem;
 }
 
 .project {
@@ -282,7 +284,7 @@ p {
 
 .project__bullet {
     background-color: var(--colour-neutral);
-    bottom: 5.25rem;
+    bottom: 3.25rem;
     position: absolute;
 }
 
@@ -309,13 +311,11 @@ p {
 
 .about__title {
     color: var(--colour-primary);
-    letter-spacing: 4.6rem;
+    letter-spacing: max(1rem, 4.6cqi);
 }
 
 .about__content {
     max-width: var(--max-width);
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .about__image {
@@ -347,11 +347,18 @@ p {
     background-color: var(--colour-primary);
     color: var(--colour-neutral);
     padding-top: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 .footer__contact-info {
     max-width: var(--max-width);
     margin: 0 auto;
+}
+
+
+.footer__contact-info p {
+    margin-bottom: 1rem;
 }
 
 .footer__link {
@@ -362,7 +369,7 @@ p {
     max-width: var(--max-width);
     margin: 0 auto;
     text-align: center;
-    letter-spacing: 2.7rem;
+    letter-spacing: max(1rem, 2.7cqi);
     margin-bottom: 2rem;
 }
 
@@ -659,9 +666,115 @@ p {
     @keyframes blink {
         50%, 100% { opacity: 0 }
     }
+
+
+    .col-1-of-2 {
+        width: 100%;
+    }
+
+    .project__image {
+        width: 15rem;
+        height: 18rem;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .project__description {
+        height: 6rem;
+    }
+
+    .project__bullet {
+        background-color: var(--colour-neutral);
+        bottom: 3.25rem;
+        position: absolute;
+    }
+    
+    .project__title {   
+        color: var(--colour-neutral);
+        position: absolute;
+        left: 2rem;
+        bottom: 2rem;
+    }
+
+    .about__image {
+        margin: 0 auto;
+    }
+    
+    .hero__description {
+        position: absolute;
+        right: 0;
+        top: 12rem;
+        width: 20rem;
+    }
+
+    .hero__bullet {
+        position: absolute;
+        display: none; 
+        background-color: var(--colour-primary); 
+    } 
 }
+
+@media screen and (min-width: 521px) and (max-width: 1024px) {
+    .project__bullet {
+        bottom: 2.25rem;
+    }
+}
+
 
 .no-scroll {
     overflow: hidden;
     height: 100vh;
+}
+
+@media (max-width: 89.5rem) {
+    .header__logo {
+        margin-left: 1rem;
+    }
+
+    .header__nav-list {
+        margin-right: 1rem;
+    }
+
+    .hero__title {
+        left: 1rem;
+    }
+
+    .hero__description {
+        right: 1rem;
+    }
+
+    .hero__bullet {
+        right: max(5rem, 40cqi);
+    }
+
+    .project__link {
+        margin-left: 2rem;
+    }
+
+    .about {
+        padding: 3rem 1rem ;
+    }
+}
+
+@media (max-width: 650px) {
+    .col-1-of-3 {
+        width: 100%;
+        display: block;
+        float: none;
+    }
+
+    .col-2-of-3 {
+        width: 100%;
+        display: block;
+        float: none;
+    }
+
+    .footer__contact-info p {
+        width: 100%;
+        text-align: center;
+    }
+
+    .about__senary-title {
+        margin-bottom: 1rem;
+    }
 }
