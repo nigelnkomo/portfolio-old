@@ -118,8 +118,8 @@ p {
 }
 
 .header__nav-item:hover {
-    text-decoration: underline; /* No extra height added */
-    text-decoration-thickness: .1rem; /* Set thickness of underline */
+    text-decoration: underline;
+    text-decoration-thickness: .1rem; 
     text-decoration-color: var(--colour-neutral); 
     text-underline-offset: 0.2rem; 
 }
@@ -180,7 +180,8 @@ p {
     width: 37rem;
 }
 
-.hero__link {
+.hero__link:link,
+.hero__link:visited {
     color: var(--colour-primary);
 }
 
