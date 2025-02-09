@@ -20,3 +20,15 @@ function moveLogo() {
 window.addEventListener("resize", moveLogo);
 window.addEventListener("DOMContentLoaded", moveLogo);
 
+// Close navigation bar when link is clicked
+document.addEventListener("DOMContentLoaded", function () {
+    const navToggle = document.getElementById("main-navigation-toggle");
+    const navLinks = document.querySelectorAll(".header__nav-link");
+
+    navLinks.forEach(link => {
+        link.addEventListener("click", function () {
+            navToggle.checked = false; // Uncheck the checkbox to close the menu
+        });
+    });
+});
+
