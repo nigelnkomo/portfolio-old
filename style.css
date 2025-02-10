@@ -35,6 +35,10 @@ body {
     background-position: center;
 }
 
+main {
+    width: 100%;
+}
+
 h2 {
     text-transform: uppercase;
     font-family: "Montserrat", sans-serif;
@@ -784,4 +788,36 @@ p {
     .about__senary-title {
         margin-bottom: 1rem;
     }
+}
+
+@media (min-width: 1585px) {
+    :root {
+        --max-width: 100%
+    }
+
+    .footer__contact-info {
+        padding: 0 15rem;
+        padding-top: 5rem;
+    }
+
+    .about__title {
+        text-align: center;
+    }
+
+    .about__content {
+        padding: 2rem 15rem;
+    }
+
+    .projects__title {
+        text-align: center;
+    }
+
+    .project {
+        padding: 2rem 15rem;
+    }
+
+    html {
+        font-size: 32px;
+    }
+        
 }
