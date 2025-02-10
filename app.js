@@ -17,23 +17,17 @@ function moveLogo() {
     }
 }
 
-// Run function on page load and when resizing
 window.addEventListener("resize", moveLogo);
 window.addEventListener("DOMContentLoaded", moveLogo);
 
-// Close navigation bar when link is clicked
 document.addEventListener("DOMContentLoaded", function () {
-    
-
     navLinks.forEach(link => {
         link.addEventListener("click", function () {
-            navToggle.checked = false; // Uncheck the checkbox to close the menu
+            navToggle.checked = false; // Close the menu
+            document.body.classList.remove("no-scroll"); // Enable scrolling
         });
     });
-});
 
-document.addEventListener("DOMContentLoaded", function () {
-    
     navToggle.addEventListener("change", function () {
         if (this.checked) {
             document.body.classList.add("no-scroll");
@@ -42,3 +36,4 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
