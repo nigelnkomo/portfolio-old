@@ -35,6 +35,16 @@ body {
     background-position: center;
 }
 
+.pointer {
+    cursor: url("./img/pointer-1.png"), auto;    
+}
+
+a:hover,
+a:focus {
+    cursor: url("./img/pointer-2.png"), auto; 
+}
+
+
 main {
     width: 100%;
     /* background-color: hwb(52 88% 0% / 0.61); */
