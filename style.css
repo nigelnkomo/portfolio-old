@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-
 :root {
     --colour-primary: #283618;
     --colour-neutral: #FEFAE0;
@@ -10,12 +8,22 @@
     --h6: max(1rem, 1.5cqi);
     --gutter-vertical: 2rem;
     --gutter-horizontal: 1rem;
-    --font-family-primary: "Lora", serif;
-    --font-family-secondary: "Montserrat", sans-serif;
+    --font-family-primary: "OV Treasure", serif;
+    --font-family-secondary: "TT Interphases Pro", sans-serif;
 
     /* Global transition values */
     --td: 150ms;
     --te: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+@font-face {
+    font-family: 'OV Treasure';
+    src: url('/fonts/OVTreasureDemo-Bold.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'TT Interphases Pro';
+    src: url('/fonts/TT\ Interphases\ Pro\ Trial\ Regular.ttf') format('truetype');
 }
 
 * {
@@ -29,7 +37,7 @@ html {
 }
 
 body {
-    font-family: "Lora", serif;
+    font-family: var(--font-family-secondary), serif;
     background: url(./img/keyboard.png), var(--colour-neutral);
     overflow-x: hidden;
     background-position: center;
@@ -52,7 +60,7 @@ main {
 
 h2 {
     text-transform: uppercase;
-    font-family: "Montserrat", sans-serif;
+    font-family: var(--font-family-primary), sans-serif;
     font-weight: 900;
     font-size: var(--h2);
     max-width: var(--max-width);
@@ -60,7 +68,7 @@ h2 {
 }
 
 h6 {
-    font-family: "Montserrat", sans-serif;
+    font-family: var(--font-family-primary), sans-serif;
     text-transform: uppercase;
     font-weight: 900;
     font-size: var(--h6);
@@ -185,7 +193,7 @@ p {
 }
 
 .hero__title {
-    font-family: "Montserrat", sans-serif;
+    font-family: "OV Treasure", sans-serif;
     font-size: max(2rem, 11.391cqi);
     font-weight: 900;
     color: var(--colour-neutral);
