@@ -48,7 +48,7 @@
                 <li class="header__nav-item">
                     <a href="./docs/NIGEL NKOMO CV.pdf" download="NIGEL NKOMO CV.pdf" class="header__nav-link">DOWNLOAD CV</a>
                 </li>
-                <li class="header__nav-item btn btn__cta--primary">
+                <li class="header__nav-item">
                     <a href="#view-my-work" class="header__nav-link">VIEW MY WORK</a>
                 </li>
             </ul>
@@ -58,22 +58,44 @@
     <main class="main">
         <!-- Hero Section -->
         <section class="hero">
-            <h1 class="hero__title">LEARN <span class="hero__title--italic">UNLEARN</span> RELEARN</h1>
-            <div class="bullet hero__bullet"></div>
+
+            <div class="marquee">
+                <h1 class="hero__title">Hello, I'm Nigel Nkomo.&nbsp;</h1>
+                <h1 class="hero__title">Hello, I'm Nigel Nkomo.&nbsp;</h1>
+            </div>
             <p class="hero__description">
                 My name’s Nigel Nkomo, a Computer Systems Engineering student at Midlands State University looking for a place to grow, a team to learn from, and challenges to solve. <a href="#who-am-i" class="link hero__link">Read more...</a>
             </p> 
+
+            <ul class="hero__cta">
+                <li class="">
+                    <a href="#view-my-work" class="hero__cta-btn-primary btn">View my work</a>
+                </li>
+                <li class="">
+                    <a href="./docs/NIGEL NKOMO CV.pdf" download="NIGEL NKOMO CV.pdf" class="hero__cta-btn-secondary btn">Download CV</a>
+                </li>
+            </ul>
+
+            <div class="hero__images">
+                <img class="hero__image hero__image-1"/ src="./img/linux.png" alt="a terminal window">
+                <img class="hero__image hero__image-2" src="./img/vs code.png" alt="a vs code window"/>
+                <img class="hero__image hero__image-3" src="./img/figma.png" alt="a figma window"/>
+            </div>
         </section>
         <!-- Projects Section -->
         <section id="view-my-work" class="projects">
-            <h2 class="projects__title">Projects</h2>
+            <h2 class="projects__title">See what I'm building 👀</h2>
             <div class="grid project">
                 <div class="row">
                     <div class="col-1-of-2 project__image"></div>
                     <div class="col-1-of-2 project__description">
-                        <div class="bullet project__bullet"></div>
-                        <h6 class="project__title">SIMULATION-BASED PICK-AND-PLACE ROBOTIC ARM</h6>
-                        <a href="#" class="link project__link">View project information</a>
+                        <h6 class="project__title">From Concept to Movement: Simulating a Pick-and-Place Robotic Arm</h6>
+                        <div class="project__info-container">
+                            <div class="project__info">motion planning</div>
+                            <div class="project__info">automation</div>
+                        </div>
+                        <a href="" class="project__link btn">View project information</a>
+                        
                     </div>
                 </div>
             </div>
@@ -82,64 +104,16 @@
         <section id="who-am-i" class="about">
             <h2 class="about__title">Who Am I?</h2>
             <div class="grid about__content">
-                <div class="row">
-                    <div class="col-1-of-2">
-                        <div class="about__image"></div>
-                        <div class="about__tldr row">
-                            <div class="col-1-of-3">
-                                <div class="bullet about__bullet"></div>
-                                <h6 class="about__senary-title">tl;dr</h6>
-                            </div>
-                            <div class="col-2-of-3">
-                                <p>
-                                    Computer Systems Engineering student at Midlands State University
-                                    <br/><br/>
-                                    Keen on learning, problem-solving, and building real-world skills
-                                    <br/><br/>
-                                    Currently exploring web development and robotics simulation through hands-on projects
-                                    <br/><br/>
-                                    Open to new challenges, technologies, and continuous improvement
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-1-of-2">
-                        <div class="row">
-                            <div class="col-1-of-3">
-                                <div class="bullet about__bullet"></div>
-                                <h6 class="about__senary-title">ABOUT ME</h6>
-                            </div>
-                            <div class="col-2-of-3">
-                                <p>
-                                    I’m an aspiring engineer with a passion for understanding and building systems — from software to hardware, to technology and society. 
-                                    <br/><br/>
-                                    Right now, I’m focused on learning, experimenting, and improving my skills, knowing that the best way to grow is by embracing challenges. 
-                                    <br/><br/>
-                                    I’m always eager to adapt, problem-solve, and work with others to figure things out. 
-                                    <br/><br/>
-                                    I’m open to exploring new tools, technologies, and disciplines, and I believe that my biggest strength is my willingness to learn. If there’s something I don’t know, I’ll dive in, research, experiment, and figure it out
-                                </p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-1-of-3">
-                                <div class="bullet about__bullet"></div>
-                                <h6 class="about__senary-title">PASTIMES</h6>
-                            </div>
-                            <div class="col-2-of-3">
-                                <p>
-                                    Beyond my academic pursuits, I regularly challenge myself to improve my typing speed, keep abreast of emerging tech via curated YouTube content, and lose myself in the imaginative worlds of science fiction and contemporary design.
-                                </p>
-                            </div>
-                        </div>
-                        
-                    </div>
-                </div>
-                
+                <div class="about__image"></div>
+                <h6 class="about__heading">I question everything.</h6>
+                <p class="about__description">
+                    I'm just a naturally inquisitive guy who loves exploring ideas and solving problems. I dive into different fields, not just to learn, but to understand why things work the way they do. Once I’ve broken them down, I push myself to apply that knowledge and move on to the next challenge. I’m all about taking initiative, finding practical solutions, and constantly refining my approach. For me, learning isn’t just about gathering knowledge—it’s about testing, questioning, and evolving.
+                </p> 
             </div>
          </section>
          <!-- Footer Section -->
           <footer id="contact-me" class="footer">
+            <h2 class="footer__title">Hire Me.</h2>
             <div class="footer__contact-info row">
                 <div class="col-1-of-3">
                     <p>
@@ -163,7 +137,7 @@
                     </p>
                 </div>
             </div>
-            <h2 class="footer__title">Nigel Nkomo</h2>
+            <h2 class="footer__watermark">Nigel</h2>
             <p class="footer__copyright">Designed and developed by Nigel Nkomo ©</p>
           </footer>
 
